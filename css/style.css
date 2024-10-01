@@ -1,0 +1,414 @@
+:root {
+    --color-de-fondo: #F5F5F5;
+    --color-de-fondo-menu: #ffffff;
+    --color-de-link: #000000;
+}
+
+body {
+    background-color: var(--color-de-fondo);
+    font-family: "Bondony";
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.6;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+.cabecera {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color-de-fondo-menu);
+}
+
+.cabecera__logo {
+    max-width: 85px; /* Ajuste para pantallas pequeñas */  
+}
+
+.cabecera__titulo {
+    font-size: 1.2rem;
+}
+
+.navegacion__lista {
+    display: none;
+}
+
+.navegacion__elemento a {
+    font-size: 0.9rem;
+}
+/* ------------------------------ Sección Presentación ------------------------------*/
+.presentacion{
+    display: flex;
+    flex-direction: column;
+  
+     /* flex-flow:column wrap */
+    
+}
+ .presentacion__foto{
+   margin-left: 24%;
+    width: 45%;
+} 
+.presentacion__contenedor{
+
+align-items: center;
+}
+
+.Github{
+    width: 20px;
+}
+.Linkedin{
+width: 20px;
+}
+.Correo{
+
+width: 20px;
+}  
+.Currículo{
+width: 20px;
+}
+.redes{
+   display: flex;
+    /* align-items:flex-start;  */
+     /* white-space: wrap;  */
+     /* align-self: center; */
+     justify-content: space-between; 
+    gap: 10px;
+} 
+/* ------------------------------ Sección sobre mí ----------------------------------*/
+
+.sobre-mi{
+    background-color: #F8F0E5;
+    display: flex;
+    flex-direction: column;
+}
+.sobre-mi__titulo{
+ text-align: center;
+}
+.sobre-mi__firma{
+    width: 45%;
+}
+/*------------------------------ Sección de Habilidades ------------------------------*/
+.habilidades{
+    display: flex;
+     flex-flow:column wrap;
+    margin-top: 10px;
+   align-items: center;
+  
+} 
+.habilidades__titulo{
+    text-align: center; 
+}
+.habilidades__lista{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    gap: 30px;
+}
+    
+
+/*------------------------------ Sección de Aficiones --------------------------------*/
+.aficiones{
+   background-color: #EADBC8; 
+   align-items: center;
+  
+}
+.aficiones__titulo{
+    text-align: center;
+}
+.aficiones__lista{
+    display: flex;
+    height: 100%;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    gap: 40px;
+}
+.aficiones__lista li{
+    align-self: center;
+}
+.aficiones__icon{
+    width: 20%;
+}
+.formacion{
+ align-items: center;
+}
+.formacion__titulo{
+    text-align: center;
+}
+.formacion__lista{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+}
+.formacion__elemento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.formacion__lista li{
+  align-self: center;
+}
+.formacion__icono{
+    width: 35%;
+    align-items: center;
+}
+/*------------------------------ Sección de Proyectos --------------------------------*/
+.proyectos{
+    background-color: #DAC0A3;
+}
+.proyectos__titulo{
+    text-align: center;
+}
+
+.cohete{
+    width: 10%;
+}
+/*------------------------------ Sección de Contacto ---------------------------------*/
+
+.contacto{
+    background-color: #102C57;
+    align-items: center;
+}
+.contacto__titulo{
+    text-align: center;
+    color: #F5F5F5;
+}
+
+.contacto__formulario{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   gap: 10px;
+}
+.contacto__campo{
+    width: 70%;
+}
+.contacto__boton{
+    background-color: aqua;
+    border-radius: 20%;
+    width: 25%;
+}
+/* ------------------------------ Responsividad ---------------------------------------*/
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    .cabecera {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cabecera__logo {
+        max-width: 100px;
+    }
+
+    .cabecera__titulo {
+        font-size: 1.5rem;
+    }
+     .navegacion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+    .navegacion__lista {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1rem;
+    }
+    /*------------------------------ Sección Presentación ------------------------------*/
+.presentacion{
+    display: flex;
+    flex-direction: row;
+}
+.presentacion__foto{
+    margin-left: 0%;
+}
+/*------------------------------ Sección de Habilidades ------------------------------*/
+.habilidades{
+    display: flex;
+
+}
+.habilidades__lista{
+    display: flex;
+    flex-direction: row;
+    gap: 50%;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+/*------------------------------ Sección de Aficiones --------------------------------*/
+.aficiones__lista{
+    display: flex;
+    gap: 30%;
+}
+.aficiones__lista li{
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.formacion__lista{
+display: flex;
+align-items: center;
+gap: 15px;
+}
+.formacion__elemento{
+    justify-content: space-between;
+}
+.formacion__lista li{
+   
+  flex-direction: row;
+
+}
+
+/*------------------------------ Sección de Proyectos --------------------------------*/
+.proyectos__nombre{
+    text-align: center;
+}
+}
+
+
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+    .cabecera{
+   display: flex;
+   flex-direction: column;
+    }
+    .cabecera__titulo {
+        font-size: 1.8rem;
+
+    }
+    .navegacion{
+        display: flex;
+        flex-direction: row;
+        gap: 65px;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1.1rem;
+    }
+
+    .presentacion{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .presentacion__titulo{
+        font-size: 2.5rem;
+    }
+    .redes{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .sobre-mi__titulo{
+        font-size: 1.9rem;
+    }
+    .presentacion__subtitulo{
+        font-size: 1.2rem;
+    }
+    .Github{
+        width: 25%
+    }
+    .Linkedin{
+        width: 25%
+    }
+    .Correo{
+       width: 25%
+    }
+    .Currículo{
+        width: 25%;
+    }
+    .sobre-mi__texto{
+        font-size: 1.3rem;
+    }
+
+    .habilidades{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 75%;
+        justify-content: space-between;
+      }
+    .habilidades__titulo{
+        font-size: 1.9rem;
+    }
+    .habilidades__lista{
+        gap: 85%;
+    }
+    .habilidades__icono{
+        width: 85%;
+    }
+
+
+    .aficiones{
+        width: 100%;
+    }
+    .aficiones__titulo{
+        font-size: 1.9rem;
+    }
+    .aficiones__lista{
+        display: flex;
+        flex-direction: row;
+    }
+    .formacion__lista{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .formacion{
+        justify-content: space-between;
+    }
+
+    .proyectos__titulo{
+        font-size: 1.9rem;
+    }
+    .proyectos__contenedor{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .proyectos__nombre{
+        font-size: 1.3rem;
+    }
+    .proyectos__descripcion{
+        font-size: 1.3rem;
+    }
+    .contacto{
+        /* display: flex;
+        flex-direction: column; */
+        height: 105%;
+    }
+    .contacto__titulo{
+        font-size: 1.9rem;
+    }
+    .contacto__campo{
+        height: 15%;
+    }
+    .contacto__campo,input{
+      font-size: 1.2rem;
+    }
+    .contacto__boton{
+        font-size: 1.2rem;
+        width: 25%;
+        height: 75%;
+    }
+    
+}
